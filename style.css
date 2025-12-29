@@ -165,12 +165,12 @@ header {
 
 /* HOME */
 .home {
-  text-align: center;
+  text-align: left;
 }
 .home-content{
     display: flex;
-    justify-content: space-around;
-    gap: 2rem;
+    justify-content: center;
+    gap: 5rem;
 }
 .profile-img {
   width: 100%;
@@ -205,9 +205,13 @@ header {
 .home-text{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
 }
+.home h2 {
+  font-size: 2.5rem;
+}
+
 .home h2 span {
   color: var(--primary);
 }
@@ -259,6 +263,9 @@ header {
     flex-direction: column;
     gap: 1rem;
     list-style: none;
+}
+.education ul h3{
+  text-align: center;
 }
 .education li{
     width: 30vw;
