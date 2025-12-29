@@ -19,36 +19,46 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");   // show/hide menu
   hamburger.classList.toggle("active");  // change icon to X
 });
-const contactForm = document.getElementById("contactForm");
+// Your existing theme toggle and hamburger code remains unchanged...
+
+// Contact form AJAX submission (no redirect)
+const contactForm = document.getElementById('contactform');  // Note: your form ID is lowercase 'contactform'
 
 if (contactForm) {
-    contactForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();  // ← This prevents the default form submission (and redirect!)
 
-        const submitBtn = contactForm.querySelector("button[type='submit']");
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Sending...";
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+        }
+
+        const formspreeEndpoint = 'https://formspree.io/f/mjgvpdvw';
+
+        const formData = new FormData(contactForm);
 
         try {
-            const response = await fetch(contactForm.action, {
-                method: "POST",
-                body: new FormData(contactForm),
-                headers: {
-                    "Accept": "application/json"
-                }
+            const res = await fetch(formspreeEndpoint, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: formData
             });
 
-            if (response.ok) {
-                alert("Message sent successfully. Thank you!");
-                contactForm.reset();
+            if (res.ok) {
+                // Success: show feedback without leaving the page
+                alert('Thank you! Your message has been sent.');
+                contactForm.reset();  // Clear the form
             } else {
-                alert("Message failed to send. Please try again.");
+                alert('Submission failed. Please try again.');
             }
-        } catch (error) {
-            alert("Network error. Please check your internet connection.");
+        } catch (err) {
+            alert('Network error. Please check your connection and try again.');
         } finally {
-            submitBtn.disabled = false;
-            submitBtn.textContent = "Submit";
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
         }
     });
 }

@@ -120,12 +120,15 @@
   <section id="contact" class="section alt">
     <h2>Contact Me</h2>
 
-    <form action="https://formsubmit.co/roviejhen.casimong@evsu.edu.ph" method="POST" id="contactform">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+      <form action="https://formspree.io/f/mjgvpdvw" method="POST" id="contactform">
+          <!-- Honeypot field (helps block spam bots) -->
+          <input type="text" name="_gotcha" style="display:none" />
+
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+      </form>
 
     <div class="contact-info">
       <p>Email: <a href="mailto:roviejhencasimong15@gmail.com">roviejhencasimong15@gmail.com</a></p>
