@@ -12,3 +12,10 @@ toggleBtn.addEventListener("click", () => {
   localStorage.setItem("theme", isDark ? "dark" : "light");
   toggleBtn.textContent = isDark ? "☀️" : "🌙";
 });
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");   // show/hide menu
+  hamburger.classList.toggle("active");  // change icon to X
+});
