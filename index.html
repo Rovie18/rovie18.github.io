@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">MyPortfolio</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="themeToggle">🌙</button>
+
+    </nav>
+  </header>
+
+  <section id="home" class="section home">
+    <div class="home-content">
+        <div class="profile-image">
+            <img src="profile.jpg" alt="Profile Photo" class="profile-img">
+        </div>
+        <div class="home-text">
+            <h2>Hello, I'm <span>Rovie Jhen</span></h2>
+            <p class="tagline">“Training to turn technology into solutions.”</p>
+            <p class="quote">“Simplicity turns everyday moments into joy.”</p>
+        </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="about-container">
+        <div class="about-text">
+            <h1>About Me</h1>
+            <p>
+            I’m a second-year IT student who’s still learning programming and coding. I’m really interested in web development 
+            and new technologies, and I enjoy figuring out how systems work and turning ideas into simple, working applications.
+            </p>
+        </div>
+        <div class="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Primary Education -</strong>Catmon Elementary School(2011-2017)</li>
+                <li><strong>Secondary Education(JHS) -</strong>Valencia National High School(2018-2022)</li>
+                <li><strong>Secondary Education(SHS) -</strong>Western Leyte College(2022-2024)</li>
+                <li><strong>Tertiary Education -</strong>Eastern Visayas State University(2024-present)</li>
+                <li><strong>Interests:</strong> Web Development, Software basics, Learning programming logic</li>
+                <li><strong>Hobbies:</strong> Cooking, Sleeping, Workout, Listening Musics, Memory journaling</li>
+            </ul>
+        </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section alt">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <div>
+        <h3>Programming</h3>
+        <p>HTML, CSS, JavaScript, C++, C language, Python (Basic)</p>
+      </div>
+
+      <div>
+        <h3>Tools</h3>
+        <p>GitHub, VS Code, Linux</p>
+      </div>
+
+      <div>
+        <h3>Soft Skills</h3>
+        <p>Teamwork, Communication</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="project1.png" alt="Project 1">
+        <h3>Login Form UI</h3>
+        <p>
+          A simple Login Form UI designed using Windows Forms (Winforms) in C# and Visual Studio.
+        </p>
+        <p><strong>Role:</strong> Designer, Frontend Developer</p>
+        <p><strong>Tools:</strong> C#</p>
+      </div>
+
+      <div class="project-card">
+        <img src="project2.jpg" alt="Project 2" class="project2">
+        <h3>WIX Portfolio Website</h3>
+        <p>
+          A responsive single-page portfolio website.
+        </p>
+        <p><strong>Role:</strong> Designer</p>
+        <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <h2>Contact Me</h2>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p>Email: roviejhencasimong15@gmail.com</p>
+      <p>
+        GitHub: <a href="#">github.com/Rovie18</a><br>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Rovie jhen. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
